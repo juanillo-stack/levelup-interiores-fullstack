@@ -73,13 +73,13 @@ export const ComoTrabajamos = () => {
 
         {/* EQUIPAMIENTO */}
         <div>
-          <h2 style={titleStyle}>Equipamiento de diseño</h2>
+          <h2 style={titleStyle}>Marcas y Proveedores</h2>
           <div style={columnStyle}>
             <p style={textStyle}>Grifería — <strong>Llavisan</strong></p>
             <p style={textStyle}>Mamparas — <strong>Llavisan</strong></p>
             <p style={textStyle}>Muebles y encimeras</p>
             <p style={textStyle}>Platos de ducha</p>
-            <p style={{ ...textStyle, fontSize: "13px", color: "#666" }}>
+            <p style={textStyle}>
               Opciones personalizadas
             </p>
           </div>
