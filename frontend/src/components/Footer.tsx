@@ -103,7 +103,7 @@ export const Footer = () => {
         <img
           src={logo}
           alt="LevelUp Interiores"
-          style={{ height: "28px", opacity: 0.9 }}
+          className="footer-logo"
         />
 
         <p style={{ fontSize: "12px", color: "#777" }}>
