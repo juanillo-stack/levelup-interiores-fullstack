@@ -33,16 +33,7 @@ export const Home = () => {
           padding: "50px 20px",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr", // 🔥 IGUALES
-            gap: "40px",
-            alignItems: "center", // 🔥 CLAVE REAL
-          }}
-        >
+        <div className="container grid-2-cols">
           {/* IZQUIERDA */}
           <div
             style={{

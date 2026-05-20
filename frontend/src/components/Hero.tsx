@@ -4,10 +4,9 @@ import heroImg from "../assets/hero.jpg";
 export const Hero = () => {
   return (
     <section
+      className="hero"
       style={{
         position: "relative",
-        height: "65vh",
-        minHeight: "420px",
         backgroundImage: `url(${heroImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -23,24 +22,9 @@ export const Hero = () => {
       />
 
       {/* CONTENIDO */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
-            padding: "0 20px",
-            width: "100%",
-          }}
-        >
-          <div style={{ maxWidth: "500px", color: "#fff" }}>
+      <div className="hero-inner">
+        <div className="container">
+          <div className="hero-copy">
             <h1
               style={{
                 fontSize: "36px",

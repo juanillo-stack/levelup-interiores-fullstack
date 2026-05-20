@@ -15,16 +15,7 @@ export const Footer = () => {
         padding: "30px 20px 15px",
       }}
     >
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "40px",
-          alignItems: "start",
-        }}
-      >
+      <div className="footer-inner">
         {/* CONTACTO */}
         <div>
           <h3 style={{ marginBottom: "10px", fontSize: "16px" }}>
@@ -79,7 +70,7 @@ export const Footer = () => {
             Horarios
           </h3>
 
-          <div style={{ display: "flex", gap: "40px" }}>
+          <div className="footer-hours">
             <div>
               <p style={{ ...textLine, fontWeight: 600 }}>
                 Trabajo
@@ -108,17 +99,7 @@ export const Footer = () => {
       </div>
 
       {/* FRANJA FINAL */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "20px auto 0",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          borderTop: "1px solid #222",
-          paddingTop: "10px",
-        }}
-      >
+      <div className="footer-bottom">
         <img
           src={logo}
           alt="LevelUp Interiores"

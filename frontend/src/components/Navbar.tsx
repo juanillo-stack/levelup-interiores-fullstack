@@ -17,6 +17,8 @@ export const Navbar = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          flexWrap: "wrap",
+          gap: "20px",
         }}
       >
         <h2
@@ -33,7 +35,9 @@ export const Navbar = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "24px",
+            gap: "16px",
+            flexWrap: "wrap",
+            justifyContent: "flex-end",
           }}
         >
           <a href="#servicios" style={link}>Servicios</a>
@@ -43,12 +47,15 @@ export const Navbar = () => {
           <a
             href="https://wa.me/34606899991"
             style={{
-              display: "flex",
+              display: "inline-flex",
               alignItems: "center",
+              flexWrap: "wrap",
+              gap: "6px",
               textDecoration: "none",
               color: "#000",
               fontSize: "13px",
               fontWeight: 500,
+              maxWidth: "100%",
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>

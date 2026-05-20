@@ -32,12 +32,12 @@ p {
   margin: 0;
 }
 
-/* 🔥 CLAVE TOTAL → reduce altura de TODA la web */
-section {
-  padding: 25px 20px !important;
+/* opcional: listas más compactas */
+ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-/* opcional: listas más compactas */
 ul, li {
   margin: 0;
   padding: 0;

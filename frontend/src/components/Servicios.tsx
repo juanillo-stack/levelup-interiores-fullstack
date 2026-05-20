@@ -4,18 +4,10 @@ export const Servicios = () => {
   return (
     <section
       id="servicios"
-      style={{ backgroundColor: "#ffffff", padding: "50px 20px" }}
+      className="servicios"
     >
-      <div
-        style={{
-          width: "100%",
-          padding: "0 60px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1px 1.5fr",
-          gap: "30px",
-          alignItems: "center",
-        }}
-      >
+      <div className="servicios-inner">
+
         {/* IZQUIERDA */}
         <div
           style={{
@@ -48,24 +40,10 @@ export const Servicios = () => {
         </div>
 
         {/* LÍNEA */}
-        <div
-          style={{
-            width: "1px",
-            backgroundColor: "#ddd",
-            height: "100%",
-          }}
-        />
+        <div className="servicios-divider" />
 
         {/* DERECHA */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "40px",
-            fontSize: "15px",
-            lineHeight: "1.9",
-          }}
-        >
+        <div className="servicios-right">
           <div>
             <p>Rehabilitación de baños</p>
             <p>Rehabilitación de cocinas</p>
