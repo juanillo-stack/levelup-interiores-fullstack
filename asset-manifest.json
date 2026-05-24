@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/levelup-interiores-fullstack/static/css/main.3cdf6c79.css",
+    "main.js": "/levelup-interiores-fullstack/static/js/main.fe110a11.js",
+    "static/media/hero.jpg": "/levelup-interiores-fullstack/static/media/hero.1acef00d237b352316c2.jpg",
+    "static/media/logolevelupinteriores.jpg": "/levelup-interiores-fullstack/static/media/logolevelupinteriores.f5b365a64460828c99e9.jpg",
+    "index.html": "/levelup-interiores-fullstack/index.html",
+    "main.3cdf6c79.css.map": "/levelup-interiores-fullstack/static/css/main.3cdf6c79.css.map",
+    "main.fe110a11.js.map": "/levelup-interiores-fullstack/static/js/main.fe110a11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cdf6c79.css",
+    "static/js/main.fe110a11.js"
+  ]
+}
