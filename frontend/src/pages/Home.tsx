@@ -5,6 +5,8 @@ import { Hero } from "../components/Hero";
 import { Servicios } from "../components/Servicios";
 import { ComoTrabajamos } from "../components/ComoTrabajamos";
 import { Footer } from "../components/Footer";
+import { FinalCTA } from "../components/FinalCTA";
+import { BrandName } from "../components/BrandName";
 import { SolicitudPresupuestoForm } from "../components/forms/SolicitudPresupuestoForm";
 
 export const Home = () => {
@@ -48,7 +50,7 @@ export const Home = () => {
             </h2>
 
             <p style={{ fontSize: "14px", lineHeight: "1.5", marginBottom: "8px" }}>
-              En LevelUp Interiores estamos especializados en la reforma de baños y
+              En <BrandName /> estamos especializados en la reforma de baños y
               cocinas, trabajando cada proyecto con un enfoque profesional,
               organizado y orientado al detalle.
             </p>
@@ -91,6 +93,7 @@ export const Home = () => {
         </div>
       </section>
 
+      <FinalCTA />
       <Footer />
 
       {/* WHATSAPP */}

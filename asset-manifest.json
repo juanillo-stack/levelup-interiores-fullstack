@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/springboot-services-website/static/css/main.e6c13ad2.css",
-    "main.js": "/springboot-services-website/static/js/main.9f33348e.js",
-    "index.html": "/springboot-services-website/index.html",
-    "main.e6c13ad2.css.map": "/springboot-services-website/static/css/main.e6c13ad2.css.map",
-    "main.9f33348e.js.map": "/springboot-services-website/static/js/main.9f33348e.js.map"
+    "main.css": "/levelup-interiores-fullstack/static/css/main.055b50e4.css",
+    "main.js": "/levelup-interiores-fullstack/static/js/main.469af6ff.js",
+    "static/media/hero.jpg": "/levelup-interiores-fullstack/static/media/hero.1acef00d237b352316c2.jpg",
+    "static/media/logolevelupinteriores.jpg": "/levelup-interiores-fullstack/static/media/logolevelupinteriores.f5b365a64460828c99e9.jpg",
+    "index.html": "/levelup-interiores-fullstack/index.html",
+    "main.055b50e4.css.map": "/levelup-interiores-fullstack/static/css/main.055b50e4.css.map",
+    "main.469af6ff.js.map": "/levelup-interiores-fullstack/static/js/main.469af6ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.9f33348e.js"
+    "static/css/main.055b50e4.css",
+    "static/js/main.469af6ff.js"
   ]
 }

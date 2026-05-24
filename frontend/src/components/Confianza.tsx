@@ -1,3 +1,6 @@
+import { BrandName } from "./BrandName";
+import { whatsappLinks } from "../lib/site";
+
 export const Confianza = () => {
   return (
     <>
@@ -21,7 +24,7 @@ export const Confianza = () => {
           </h2>
 
           <p style={{ fontSize: "14px", lineHeight: "1.6", marginBottom: "12px" }}>
-            En LevelUp Interiores estamos especializados en la reforma de baños y cocinas,
+            En <BrandName /> estamos especializados en la reforma de baños y cocinas,
             trabajando cada proyecto con un enfoque práctico, organizado y orientado al detalle.
           </p>
 
@@ -59,9 +62,12 @@ export const Confianza = () => {
           </p>
         </div>
 
-        <button
+        <a
+          href={whatsappLinks.contact}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            backgroundColor: "#d6c3a3", // 🔥 color marca
+            backgroundColor: "#d6c3a3",
             color: "#000",
             padding: "10px 18px",
             borderRadius: "20px",
@@ -69,10 +75,12 @@ export const Confianza = () => {
             cursor: "pointer",
             fontSize: "13px",
             fontWeight: 500,
+            textDecoration: "none",
+            display: "inline-block",
           }}
         >
           Hablar por WhatsApp
-        </button>
+        </a>
       </section>
 
       {/* CONTACTO */}
@@ -87,7 +95,9 @@ export const Confianza = () => {
           Contacto
         </h2>
 
-        <p style={{ marginBottom: "6px" }}>LevelUp Interiores</p>
+        <p style={{ marginBottom: "6px" }}>
+          <BrandName />
+        </p>
         <p style={{ marginBottom: "6px" }}>C/ Rey Gaspar Nº9, Campanillas · Málaga</p>
         <p style={{ marginBottom: "6px" }}>📞 606 89 99 91</p>
         <p style={{ marginBottom: "6px" }}>✉️ design@levelupinteriores.es</p>

@@ -1,20 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+import { BrandName } from "./BrandName";
+import { whatsappLinks } from "../lib/site";
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <h2 className="navbar-brand">LevelUp Interiores</h2>
+        <Link to="/" className="navbar-brand">
+          <BrandName />
+        </Link>
 
         <div className="navbar-links">
-          <a href="#servicios" style={link}>Servicios</a>
-          <a href="#metodo" style={link}>Método</a>
-          <a href="#nosotros" style={link}>Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#metodo">Método</a>
+          <a href="#nosotros">Nosotros</a>
 
           <a
-            href="https://wa.me/34606899991"
+            href={whatsappLinks.contact}
             className="navbar-contact"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaWhatsapp size={18} className="navbar-contact-icon" />
             <span className="navbar-contact-text">606 · 899 · 991</span>
@@ -24,11 +31,4 @@ export const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-const link = {
-  textDecoration: "none",
-  color: "#000",
-  fontWeight: 500,
-  fontSize: "13px",
 };

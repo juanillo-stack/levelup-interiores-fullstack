@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logolevelupinteriores.jpg";
+import { BrandName } from "./BrandName";
+import { site, whatsappLinks } from "../lib/site";
 
 export const Footer = () => {
   const textLine = {
@@ -26,14 +29,12 @@ export const Footer = () => {
             📍 C/ Rey Gaspar Nº9, Campanillas, Málaga, 29590
           </p>
 
-          <p style={textLine}>
-            📩 Email: design@levelupinteriores.es
-          </p>
+          <p style={textLine}>📩 Email: {site.email}</p>
 
           {/* 🔥 CAMBIO AQUÍ */}
           <p style={textLine}>
             <a
-              href="https://www.linkedin.com/company/levelup-interiores"
+              href={site.linkedIn}
               target="_blank"
               rel="noreferrer"
               style={{ color: "#fff", textDecoration: "none" }}
@@ -44,7 +45,7 @@ export const Footer = () => {
 
           <p style={textLine}>
             <a
-              href="https://wa.me/34606899991"
+              href={whatsappLinks.contact}
               style={{
                 color: "#fff",
                 textDecoration: "none",
@@ -94,8 +95,25 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* VACÍO */}
-        <div></div>
+        {/* LEGAL */}
+        <div>
+          <h3 style={{ marginBottom: "10px", fontSize: "16px" }}>Legal</h3>
+          <p style={textLine}>
+            <Link to="/aviso-legal" style={footerLink}>
+              Aviso legal
+            </Link>
+          </p>
+          <p style={textLine}>
+            <Link to="/privacidad" style={footerLink}>
+              Política de privacidad
+            </Link>
+          </p>
+          <p style={textLine}>
+            <Link to="/cookies" style={footerLink}>
+              Política de cookies
+            </Link>
+          </p>
+        </div>
       </div>
 
       {/* FRANJA FINAL */}
@@ -104,12 +122,20 @@ export const Footer = () => {
           src={logo}
           alt="LevelUp Interiores"
           className="footer-logo"
+          translate="no"
         />
 
         <p style={{ fontSize: "12px", color: "#777" }}>
-          © 2025 LevelUp Interiores
+          © {new Date().getFullYear()}{" "}
+          <BrandName style={{ color: "#777" }} />
         </p>
       </div>
     </footer>
   );
+};
+
+const footerLink: React.CSSProperties = {
+  color: "#fff",
+  textDecoration: "none",
+  fontSize: "14px",
 };
