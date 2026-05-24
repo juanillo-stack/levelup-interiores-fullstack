@@ -1,0 +1,4 @@
+backend/
+Capturas/
+.idea/
+.github/workflows/deploy-github-pages.yml

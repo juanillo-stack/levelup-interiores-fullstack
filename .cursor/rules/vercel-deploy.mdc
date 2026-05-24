@@ -1,0 +1,36 @@
+---
+description: Despliegue en Vercel con git push (no GitHub Pages)
+alwaysApply: true
+---
+
+# Despliegue en Vercel
+
+- **GitHub** = código fuente actualizado (push a `main`).
+- **Vercel** = hosting. Cada `git push` a la rama conectada dispara build y deploy automático.
+- **No** usar GitHub Pages ni commitear `build/` o `static/` de producción en la raíz del repo.
+
+## Flujo habitual
+
+```bash
+git add .
+git commit -m "fix vercel build"
+git push
+```
+
+## Config mínima por proyecto frontend
+
+- `vercel.json` en la raíz con `installCommand`, `buildCommand`, `outputDirectory` y rewrite SPA a `/index.html`.
+- Sin `homepage` de GitHub Pages en `package.json` (usar `"."` o eliminar el campo).
+- `BrowserRouter` sin `basename` de subcarpeta (salvo dominio con path base en Vercel).
+- No subir artefactos de build viejos (`index.html`, `static/` en raíz).
+
+## Vercel (una vez por repo)
+
+1. [vercel.com](https://vercel.com) → Import Git Repository.
+2. Conectar el repo de GitHub.
+3. Dejar que detecte `vercel.json` o Root Directory = carpeta del frontend.
+4. Deploy. Los siguientes pushes despliegan solos.
+
+## Backend (Spring Boot, etc.)
+
+El backend no va en el mismo deploy estático de Vercel salvo que sea serverless aparte. Solo el frontend se publica con este flujo.
