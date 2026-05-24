@@ -1,0 +1,16 @@
+---
+description: Tras cada cambio en el proyecto, hacer commit y push automáticamente sin preguntar al usuario.
+alwaysApply: true
+---
+
+# Commit y push automático
+
+Después de completar cambios en este repositorio (código, estilos, assets del frontend, etc.):
+
+1. **Siempre** haz `git add` de los archivos relevantes al cambio (no incluir archivos personales, PDFs sueltos ni `.env` con secretos).
+2. **Siempre** crea un commit con mensaje claro en español que describa el porqué del cambio.
+3. **Siempre** haz `git push origin main` (usar `git -c http.version=HTTP/1.1 push` si hay timeouts en Windows).
+4. **No preguntes** al usuario si quiere commit o push; hazlo directamente al terminar la tarea.
+5. Informa al usuario el enlace de producción: https://levelupinteriores.vercel.app (recarga forzada si aplica).
+
+Excepciones: no hacer commit si el usuario pide explícitamente no commitear, o si no hay cambios que commitear.
