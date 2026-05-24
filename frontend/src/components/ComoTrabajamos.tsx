@@ -54,11 +54,9 @@ export const ComoTrabajamos = () => {
         <div className="metodo-process">
           <p className="metodo-block-label">Proceso</p>
           <ol className="metodo-timeline">
-            {pasos.map((texto, i) => (
+            {pasos.map((texto) => (
               <li key={texto} className="metodo-timeline-item">
-                <span className="metodo-timeline-dot" aria-hidden="true">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <span className="metodo-timeline-dot" aria-hidden="true" />
                 <span className="metodo-timeline-label">{texto}</span>
               </li>
             ))}
