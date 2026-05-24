@@ -73,3 +73,11 @@ frontend/node_modules/
 # Vercel
 # ======================
 .vercel
+
+# Iconos sueltos en raíz (los oficiales están en frontend/public/)
+/favicon.ico
+/logo192.png
+/logo512.png
+
+# Archivos personales / capturas locales
+/Capturas/*.pdf
