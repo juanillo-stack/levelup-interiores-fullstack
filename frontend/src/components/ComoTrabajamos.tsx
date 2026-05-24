@@ -39,52 +39,63 @@ const marcas = [
 
 export const ComoTrabajamos = () => {
   return (
-    <section id="metodo" className="metodo-section">
-      <div className="metodo-wrap">
-        <header className="metodo-header">
-          <p className="metodo-kicker">Cómo trabajamos</p>
-          <h2 className="metodo-title">Nuestro método</h2>
+    <section id="metodo" className="metodo-section" aria-labelledby="metodo-title">
+      <div className="metodo-inner">
+        <header className="metodo-intro">
+          <p className="metodo-eyebrow">Cómo trabajamos</p>
+          <h2 id="metodo-title" className="metodo-heading">
+            Nuestro método
+          </h2>
+          <p className="metodo-lead">
+            Un proceso claro, materiales seleccionados y marcas de confianza en cada reforma.
+          </p>
         </header>
 
-        <div className="metodo-grid">
-          <article className="metodo-card">
-            <h3 className="metodo-card-title">Proceso</h3>
-            <ol className="metodo-steps">
-              {pasos.map((texto, i) => (
-                <li key={texto}>
-                  <span className="metodo-step-num">{String(i + 1).padStart(2, "0")}</span>
-                  <span>{texto}</span>
-                </li>
-              ))}
-            </ol>
-          </article>
+        <div className="metodo-process">
+          <p className="metodo-block-label">Proceso</p>
+          <ol className="metodo-timeline">
+            {pasos.map((texto, i) => (
+              <li key={texto} className="metodo-timeline-item">
+                <span className="metodo-timeline-dot" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="metodo-timeline-label">{texto}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
 
-          <article className="metodo-card">
-            <h3 className="metodo-card-title">Materiales</h3>
-            <ul className="metodo-list">
+        <div className="metodo-split">
+          <div className="metodo-block metodo-block--materiales">
+            <p className="metodo-block-label">Materiales</p>
+            <ul className="metodo-features">
               {materiales.map(({ icon: Icon, label }) => (
-                <li key={label}>
-                  <Icon className="metodo-list-icon" aria-hidden="true" />
-                  <span>{label}</span>
+                <li key={label} className="metodo-feature">
+                  <span className="metodo-feature-icon-wrap">
+                    <Icon className="metodo-feature-icon" aria-hidden="true" />
+                  </span>
+                  <span className="metodo-feature-text">{label}</span>
                 </li>
               ))}
             </ul>
-          </article>
+          </div>
 
-          <article className="metodo-card">
-            <h3 className="metodo-card-title">Marcas</h3>
-            <ul className="metodo-brands">
+          <div className="metodo-block metodo-block--marcas">
+            <p className="metodo-block-label">Marcas</p>
+            <ul className="metodo-partners">
               {marcas.map(({ icon: Icon, categoria, marca }) => (
-                <li key={categoria}>
-                  <Icon className="metodo-brand-icon" aria-hidden="true" />
-                  <span className="metodo-brand-text">
-                    <span className="metodo-brand-cat">{categoria}</span>
-                    <strong>{marca}</strong>
+                <li key={categoria} className="metodo-partner">
+                  <span className="metodo-partner-icon-wrap">
+                    <Icon className="metodo-partner-icon" aria-hidden="true" />
+                  </span>
+                  <span className="metodo-partner-copy">
+                    <span className="metodo-partner-cat">{categoria}</span>
+                    <span className="metodo-partner-name">{marca}</span>
                   </span>
                 </li>
               ))}
             </ul>
-          </article>
+          </div>
         </div>
       </div>
     </section>

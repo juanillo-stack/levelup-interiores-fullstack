@@ -4,7 +4,6 @@ import {
   FaEnvelope,
   FaLinkedinIn,
   FaPhone,
-  FaWhatsapp,
 } from "react-icons/fa";
 import logo from "../assets/logolevelupinteriores.jpg";
 import { BrandName } from "./BrandName";
@@ -27,14 +26,16 @@ const FooterLink = ({
   href,
   children,
   external = false,
+  className = "",
 }: {
   href: string;
   children: React.ReactNode;
   external?: boolean;
+  className?: string;
 }) => (
   <a
     href={href}
-    className="site-footer-link"
+    className={`site-footer-link ${className}`.trim()}
     {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
   >
     {children}
@@ -49,13 +50,13 @@ export const Footer = () => {
       <div className="site-footer-inner">
         <FooterColumn label="Contacto">
           <div className="site-footer-stack">
-            <FooterLink href={`tel:${site.phoneHref}`}>
+            <FooterLink
+              href={whatsappLinks.contact}
+              external
+              className="site-footer-wa"
+            >
               <FaPhone className="site-footer-icon" aria-hidden="true" />
-              <span>{site.phoneDisplay}</span>
-            </FooterLink>
-            <FooterLink href={whatsappLinks.contact} external>
-              <FaWhatsapp className="site-footer-icon" aria-hidden="true" />
-              <span>WhatsApp</span>
+              <span className="site-footer-wa-text">WhatsApp</span>
             </FooterLink>
             <FooterLink href={`mailto:${site.email}`}>
               <FaEnvelope className="site-footer-icon" aria-hidden="true" />
@@ -74,8 +75,8 @@ export const Footer = () => {
               <strong>Lunes a Viernes</strong>
             </p>
             <p className="site-footer-text">Trabajo · 07:00 – 15:00</p>
-            <p className="site-footer-text">WhatsApp · 07:00 – 22:00</p>
-            <p className="site-footer-note">Respuesta online ininterrumpida</p>
+            <p className="site-footer-text">Atención online · 07:00 – 22:00</p>
+            <p className="site-footer-note">Respuesta ininterrumpida</p>
           </div>
         </FooterColumn>
 
