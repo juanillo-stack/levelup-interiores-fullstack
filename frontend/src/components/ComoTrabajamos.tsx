@@ -12,21 +12,21 @@ import {
 } from "react-icons/fa";
 
 const pasos = [
-  "Visita inicial y valoración del trabajo",
+  "Visita y valoración",
   "Presupuesto detallado",
-  "Planificación de la reforma",
-  "Ejecución organizada por fases",
-  "Seguimiento y control",
+  "Planificación",
+  "Ejecución por fases",
+  "Seguimiento",
   "Entrega final",
 ];
 
 const materiales = [
-  { icon: FaGem, label: "Materiales de alta calidad" },
+  { icon: FaGem, label: "Materiales de calidad" },
   { icon: FaShieldAlt, label: "Soluciones duraderas" },
-  { icon: FaTools, label: "Instalación funcional y precisa" },
+  { icon: FaTools, label: "Instalación precisa" },
   { icon: FaRulerCombined, label: "Optimización del espacio" },
-  { icon: FaCheckCircle, label: "Mejora de seguridad y eficiencia" },
-  { icon: FaThLarge, label: "Acabados con criterio profesional" },
+  { icon: FaCheckCircle, label: "Seguridad y eficiencia" },
+  { icon: FaThLarge, label: "Acabados profesionales" },
 ];
 
 const marcas = [
@@ -39,56 +39,51 @@ const marcas = [
 
 export const ComoTrabajamos = () => {
   return (
-    <section id="metodo" className="como-trabajamos-section">
-      <div className="como-trabajamos-inner como-trabajamos-inner--process">
-        <article className="como-trabajamos-card">
-          <h2>Nuestro proceso</h2>
-          <div className="como-trabajamos-card-list">
-            {pasos.map((texto, i) => (
-              <p key={i}>{texto}</p>
-            ))}
-          </div>
-        </article>
-      </div>
+    <section id="metodo" className="metodo-section">
+      <div className="metodo-wrap">
+        <header className="metodo-header">
+          <p className="metodo-kicker">Cómo trabajamos</p>
+          <h2 className="metodo-title">Nuestro método</h2>
+        </header>
 
-      <div className="como-trabajamos-visual">
-        <div className="como-trabajamos-visual-header">
-          <p className="como-trabajamos-kicker">Calidad en cada detalle</p>
-          <h2 className="como-trabajamos-visual-title">
-            Materiales y marcas con las que trabajamos
-          </h2>
-        </div>
-
-        <div className="como-trabajamos-visual-grid">
-          <article className="como-trabajamos-panel">
-            <h3>Materiales y acabados</h3>
-            <div className="como-trabajamos-tiles">
-              {materiales.map(({ icon: Icon, label }) => (
-                <div key={label} className="como-trabajamos-tile">
-                  <span className="como-trabajamos-tile-icon" aria-hidden="true">
-                    <Icon />
-                  </span>
-                  <span>{label}</span>
-                </div>
+        <div className="metodo-grid">
+          <article className="metodo-card">
+            <h3 className="metodo-card-title">Proceso</h3>
+            <ol className="metodo-steps">
+              {pasos.map((texto, i) => (
+                <li key={texto}>
+                  <span className="metodo-step-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span>{texto}</span>
+                </li>
               ))}
-            </div>
+            </ol>
           </article>
 
-          <article className="como-trabajamos-panel como-trabajamos-panel--brands">
-            <h3>Nuestras marcas</h3>
-            <div className="como-trabajamos-brands">
-              {marcas.map(({ icon: Icon, categoria, marca }) => (
-                <div key={categoria} className="como-trabajamos-brand">
-                  <span className="como-trabajamos-brand-icon" aria-hidden="true">
-                    <Icon />
-                  </span>
-                  <div className="como-trabajamos-brand-copy">
-                    <span className="como-trabajamos-brand-cat">{categoria}</span>
-                    <strong>{marca}</strong>
-                  </div>
-                </div>
+          <article className="metodo-card">
+            <h3 className="metodo-card-title">Materiales</h3>
+            <ul className="metodo-list">
+              {materiales.map(({ icon: Icon, label }) => (
+                <li key={label}>
+                  <Icon className="metodo-list-icon" aria-hidden="true" />
+                  <span>{label}</span>
+                </li>
               ))}
-            </div>
+            </ul>
+          </article>
+
+          <article className="metodo-card">
+            <h3 className="metodo-card-title">Marcas</h3>
+            <ul className="metodo-brands">
+              {marcas.map(({ icon: Icon, categoria, marca }) => (
+                <li key={categoria}>
+                  <Icon className="metodo-brand-icon" aria-hidden="true" />
+                  <span className="metodo-brand-text">
+                    <span className="metodo-brand-cat">{categoria}</span>
+                    <strong>{marca}</strong>
+                  </span>
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </div>

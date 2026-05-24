@@ -5,7 +5,6 @@ import { Hero } from "../components/Hero";
 import { Servicios } from "../components/Servicios";
 import { ComoTrabajamos } from "../components/ComoTrabajamos";
 import { Footer } from "../components/Footer";
-import { FinalCTA } from "../components/FinalCTA";
 import { BrandName } from "../components/BrandName";
 import { SolicitudPresupuestoForm } from "../components/forms/SolicitudPresupuestoForm";
 
@@ -93,7 +92,6 @@ export const Home = () => {
         </div>
       </section>
 
-      <FinalCTA />
       <Footer />
 
       {/* WHATSAPP */}
